@@ -1,3 +1,6 @@
+/* saw a video that this is the way the guy starts all his css. get rid of 
+default padding and margin and use border-box calcs for sizing. makes sense. */
+
 * {
     padding: 0;
     margin: 0;
@@ -8,22 +11,25 @@ html {
     font-family: Roboto, sans-serif;
     font-size: 16px;
 }
-
+/* this was also how he did the defaults for his body. 100vh and 100% width */
 body {
     height: 100vh;
     width: 100%;
     background-color: white;
 }
 
-.header {
+.header, .hero{
     background-color: #1f2937;
     display: flex;
+}
+
+.header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 250px 0 250px;
 }
 
-a {
+a, .hero p {
     text-decoration: none;
     color: #e5e7eb;
     font-size: 18px;
@@ -37,4 +43,133 @@ span {
     display: flex;
     align-items: center;
     gap: 25px;
+}
+
+.hero {
+    padding: 200px 250px;
+    gap: 40px;
+}
+
+.hero h1 {
+    color: #f9faf8;
+    font-size: 48px;
+    }
+
+/* .pic img {
+    max-width: 800px;
+    max-height: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+} */
+
+.pic {
+    width: 35vw;
+    /* height: 400px; */
+    background-image: url(./images/iceberg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* .pic div {
+    max-width: 800px;
+    max-height: 400px;
+    text-align: center;
+} */
+
+/* .pic img {
+
+} */
+
+.button {
+    background-color: #3883f6;
+    color: #f9faf8;
+    font-size: 18px;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.information img {
+    width: 150px;
+    height: 150px;
+    border: #3883f6;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+    object-fit: cover;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 250px;
+    gap: 75px;
+}
+
+.info-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.info-blocks div {
+    width: 150px;
+    text-align: center;
+}
+
+.testimony {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 36px;
+    padding: 100px 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.testimony p, h2 {
+    max-width: 600px;
+}
+
+.testimony h2 {
+    font-size: 24px;
+    text-align: right;
+    font-weight: 900;
+}
+
+.action {
+    margin: 50px 250px;
+    background-color: #3883f6;
+    color:#f9faf8;
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.action button {
+    border-color: #f9faf8;
+    border-style: solid;
+}
+
+.footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
